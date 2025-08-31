@@ -1,0 +1,51 @@
+#top {
+    background-color: #e7e6e0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.add{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.summery{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.list{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.goals{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.notes{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.help{
+    background-color: #e7e6e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

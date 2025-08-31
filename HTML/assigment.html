@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assigment.css">
+</head>
+<body>
+    <!--Header Top-->
+    <header id="top">
+        <h1>📚Study Time Management Tracker</h1>
+        <nav>
+            <a href="#add-session">Add Session</a>
+            <a href="#today-summerty">Today Summery</a>
+            <a href="#sessions-list">All Sessions</a>
+            <a href="#goals">Goals</a>
+            <a href="#notes">Notes</a>
+        </nav>
+        <hr>
+    </header>
+    <!--Quick Help-->
+    <details class="help">
+        <summery>HOW TO USE THIS PAZE</summery>
+        <p>1) <a href="#add-session">Add Session</a> Form Se Padai Ka Session fill karo.</p>
+        <p>2)<a href="session-list">All Sessions</a> Table me Entries Dekhenge. </p>
+        <p>3)<a href="goals">Check Your Goals</a> Aap apne Goals Check Kar Sakte ho.</p>
+        <p>4)This Is Our Use Cases.HopeFully You Will Enjoy It.</p>
+    </details>
+    <!-- Add Session form-->
+     <main>
+        <section id="add-session" class="add">
+            <h2>➕ Add Study Session</h2>
+            <form>
+                <fieldset>
+                    <legend>Session Details</legend>
+                    <label for="date">Date:</label>
+                    <input type="date" id="data" name="date" required><br><br>
+                    <label for="subject">Subject:</label>
+                    <input list="subjects" id="subject" name="subject" placeholder="Select OR Choose Subject" required>
+                    <datalist id="subjects">
+                        <option value="Maths">
+                        <option value="OPPS">
+                        <option value="DBMS">
+                        <option value="DSA">
+                        <option value="English">
+                    </datalist>
+                    <br><br>
+                    <lable for="topic">Topic/Chapter</lable>
+                    <input type="text" id="topic" name="Topic" placeholder="Enter Topics/Chapters" maxlength="80" required><br><br>
+                    <label for="start-time">Start/Time</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                    <label for="end-time">Enter/Time</label>
+                    <input type="time" id="end-time" name="end-time" required><br><br>
+                    <label for="mode">Mode:</label>
+                    <select id="mode" name="mode">
+                        <option values="self-study">self-study</option>
+                        <option value="classroom">classroom</option>
+                        <option value="rivision">rivision</option>
+                        <option value="test">test/mock</option>
+                    </select>
+                    <br><br>    
+                    <label for="focus-level">Focus Level:</label>
+                    <input type="radio" id="focus-level" name="focus-level" value="low">Low
+                    <input type="radio" id="focus-level" name="focus-level" value="medium">medium
+                    <input type="radio" id="focus-level" name="focus-level" value="high">high
+                    <br><br>
+                    <lable for="tags">Tags:</lable>
+                    <input type="text" id="tags" name="tags" placeholder="e.g.,#formula #pyqs">
+                    <br><br>
+                    <lable for="feedback">Feedback:</lable><br>
+                    <textarea id="feedback" name="feedback" row="4" cols="50" placeholder="Enter Any Issue You Faced in That."></textarea>
+                    <br><br>
+                    <label for="save"></label>
+                    <button type="submit" id="save" name="save">Sumbit</button>
+                    <lable for="reset"></lable>
+                    <button type="reset" id="reset" name="reset">Reset</button>
+                </fieldset>
+            </form>
+        </section>
+        <!--Today Summary-->
+        <section id="today-summerty" class="summery">
+            <h2>📅 Today Summary</h2>
+            <p>
+                Date:<time datetime="2025-08-29"> 21 Aug 2025</time>
+            </p>
+            <p>
+                Total Study Hours:
+                <meter id="total-meter" min="0" max="8" value="3" title="3/8 hrs">3/8 hrs</meter>
+            </p>
+            <p>
+                Focus Level:
+                <meter id="focus-level" min="0" max="10" value="9" title="9/10">9/10</meter>
+            </p>
+            <p>
+                Daily Task Completion:
+                <meter id="task" max="100" value="75">75%</meter>
+            </p>
+            <hr>
+        </section>
+        <!--Sessions List-->
+        <section id="sessions-list" class="list">
+            <h2>📃 All Sessions (Sample Rows)</h2>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <tr>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Topic</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Mode</th>
+                    <th>Focus</th>
+                    <th>Tags</th>
+                </tr>
+                <tr>
+                    <td>21-08-2025</td>
+                    <td>Maths</td>
+                    <td>Integration</td>
+                    <td>10:00</td>
+                    <td>12:00</td>
+                    <td>Self-Study</td>
+                    <td>High</td>
+                    <td>#formulas #problems</td>
+                </tr>
+                <tr>
+                    <td>22-08-2025</td>
+                    <td>DBMS</td>
+                    <td>Normalization</td>
+                    <td>14:00</td>
+                    <td>16:00</td>
+                    <td>Classroom</td>
+                    <td>Medium</td>
+                    <td>#concepts #diagrams</td>
+                </tr>
+            </table>
+            <p>* Ye rows sample hain; actual app me yaha dynamic data aayega.</p>
+            <hr>
+        </section>
+        <!--Goals Setup:-->
+        <section id="goals" class="goals">
+            <h2>🎯 Goals</h2>
+            <form>
+                <fieldset>
+                    <legend>Daily Target</legend>
+                    <label for="daily-hours">Daily-Target (Hourse)</label>
+                    <input type="number" id="daily-hours" name="daily-hours" min="1" max="12" value="4">
+                    <br><br>
+                    <label for="weekly-hours">Weekly-hours</label>
+                    <input type="number" id="weekly-hours" name="weekly-hours" min="28"  value="15">
+                    <br><br>
+                    <label for="impotant-subject">High Lighted Subject</label>
+                    <select id="impotant-subject" name="important-subject">
+                        <optgroup label="Theory">
+                            <option valur="English">English</option>
+                            <option value="DBMS">DBMS</option>
+                            <option value="Computer-Organization">Computer Organization</option>
+                            <option value="Maths">Maths</option>
+                        </optgroup>
+                        <optgroup label="Programming">
+                            <option value="DSA">DSA</option>
+                            <option value="OOPS">OOPS</option>
+                            <option value="SQL">SQL</option>
+                            <option value="HTML/CSS">HTML/CSS</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
+                    <button type="submit">Save Goals</button>
+                </fieldset>
+            </form>
+            <hr>
+        </section>
+        <!--Notes Section-->
+        <section id="notes" class="notes">
+            <h2>🗒 Notes/Journal</h2>
+            <form>
+                <fieldset>
+                    <legend>Add Note</legend>
+                    <input type="date">
+                    <br><br>
+                    <label for="note">Note</label><br>
+                    <textarea id="note" name="Note" rows="6" cols="60" placeholder="Write Your Notes Here"></textarea>
+                    <br><br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+     </main>
+     <!--Footer-->
+     <footer>
+        <hr>
+        <u>Made By,<a href="mailto:vikashsisodia2004@gmai.com">Vikash Sisodia </a></u><br>
+        <p><a href="#top"></a></p>
+     </footer>
+
+</body>
+</html>
